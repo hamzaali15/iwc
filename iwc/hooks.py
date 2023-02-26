@@ -96,9 +96,9 @@ doctype_js = {
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Salary Slip": "iwc.hook_events.salary_slip.OverrideSalarySlip"
+}
 
 # Document Events
 # ---------------
@@ -139,9 +139,9 @@ doc_events = {
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "iwc.event.get_events"
-# }
+override_whitelisted_methods = {
+	"hrms.payroll.doctype.salary_slip.salary_slip.make_salary_slip_from_timesheet": "iwc.hook_events.salary_slip.make_salary_slip_from_timesheet"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
